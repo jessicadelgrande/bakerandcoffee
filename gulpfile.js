@@ -13,34 +13,34 @@ const autoprefixer = require('gulp-autoprefixer');
 const historyApiFallback = require('connect-history-api-fallback');
 
 gulp.task('styles', () => {
-    return gulp.src('./dev/styles/**/*.scss')
+    return gulp.src('./css/*.scss')
     .pipe(plumber())
     .pipe(sass().on('error',notify.onError({
             message: "Error: <%= error.message %>",
             title: 'Error in CSS 💀'
         })))
     .pipe(autoprefixer('last 2 versions', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1'))
-    .pipe(concat('style.css'))
-    .pipe(gulp.dest('./public/styles'))
+    .pipe(concat('./css/style.css'))
+    .pipe(gulp.dest('.'))
     .pipe(reload({stream: true}));
 });
 
-gulp.task('javascript', () => {
-    browserify('dev/scripts/script.js', {debug: true})
-        .transform('babelify', {
-            sourceMaps: true,
-            presets: ['es2015','react']
-        })
-        .bundle()
-        .on('error',notify.onError({
-            message: "Error: <%= error.message %>",
-            title: 'Error in JS 💀'
-        }))
-        .pipe(source('scripts/script.js'))
-        .pipe(buffer())
-        .pipe(gulp.dest('./public'))
-        .pipe(reload({stream:true}));
-});
+// gulp.task('javascript', () => {
+//     browserify('dev/*.js', {debug: true})
+//         .transform('babelify', {
+//             sourceMaps: true,
+//             presets: ['es2015','react']
+//         })
+//         .bundle()
+//         .on('error',notify.onError({
+//             message: "Error: <%= error.message %>",
+//             title: 'Error in JS 💀'
+//         }))
+//         .pipe(source('*.js'))
+//         .pipe(buffer())
+//         .pipe(gulp.dest('./public'))
+//         .pipe(reload({stream:true}));
+// });
 
 gulp.task('browserSync', () => {
     browserSync.init({
@@ -52,9 +52,11 @@ gulp.task('browserSync', () => {
 });
 
 gulp.task('watch', () => {
-    gulp.watch('./dev/**/*.js', ['javascript']);
+    // gulp.watch('./dev/**/*.js', ['javascript']);
     gulp.watch('./dev/styles/**/*.scss', ['styles']);
     gulp.watch('./*.html', reload);
 });
 
-gulp.task('default', ['browserSync', 'styles', 'javascript', 'watch'])
+gulp.task('default', ['browserSync', 'styles', 'watch'])
+
+ // 'javascript',

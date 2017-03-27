@@ -95,6 +95,8 @@
 
 .form__fullWidth {
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 100%;
 	position: relative;
 	input {
@@ -105,6 +107,7 @@
 .form__fullWidth {
 	@include bp(med) {
 		flex-direction: column;
+		align-items: center;
 	}
 }
 
@@ -189,6 +192,8 @@
 	@include bp(med) {
 		background-size: 41%;
 		text-align: center;
+		align-items: center;
+		justify-content: center;
 	}
 }
 
