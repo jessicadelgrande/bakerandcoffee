@@ -1,0 +1,67 @@
+header {
+	background-image: url("../images/hero.jpg");
+	width: 100%;
+	height: 85vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+}
+
+.fa.fa-bars {
+	text-align: right;
+	padding-top: 30px;
+	padding-right: 30px;
+}
+
+.header__logoBlock {
+	color: white;
+	text-align: center;
+	margin: auto;
+	margin-top: 20%;
+	position: relative;
+	p {
+		font-size: 0.8rem;
+		i {
+			font-size: 0.1rem;
+		}
+	}
+}
+
+.header__windmillContainer {
+	width: 20%;
+	margin: 0 auto;
+	margin-bottom: -40px;
+}
+
+.header__logoBlock h1 {
+	text-indent: -9999px;
+}
+
+.header__logo {
+	width: 70%;
+}
+
+.badge__wrapper {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+
+}
+
+.badge__circle {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	transform: scale(0.7, 0.7);	
+	top: 25px;
+}
+
+.badge__text {
+	position: absolute;
+	text-align: center;
+	top: 50px;
+	font-size: 1.2rem;
+	font-family: $fontPrimary;
+	color: white;
+}

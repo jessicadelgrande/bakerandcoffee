@@ -1,0 +1,48 @@
+// start footer
+
+footer {
+	@include sectionBackground(("../assets/footerbg.png"));
+	padding: 80px 0;
+	color: white;
+	font-family: $fontPrimary;
+	font-size: 0.8rem;
+	letter-spacing: 0.1rem;
+}
+
+.footer__wrapper {
+	display: flex;
+}
+
+.footer__column {
+	width: 33.3%;
+	margin: 0 30px;
+}
+
+.title__uppercase {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 1rem;
+}
+
+.footer__primaryColor {
+	color: $brandPrimary;
+}
+
+.footer__link {
+	text-decoration: none;
+	color: $brandPrimary;
+}
+
+.footer__bold {
+	font-weight: 700;
+}
+
+.footer__social {
+	margin: 40px 15px 15px 0;
+	i {
+		font-size: 1.5rem;
+		letter-spacing: 0.5rem;
+	}
+}
+
+// end footer

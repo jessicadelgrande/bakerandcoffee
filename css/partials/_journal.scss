@@ -1,0 +1,126 @@
+// start .journal
+
+.journal {
+	@include sectionBackground("../assets/journalbg.png");
+	@include sectionPadding;
+	padding-bottom: 30px;
+}
+
+.gallery__imageContainer.journal__imageContainer {
+	width: 100%;
+	margin: 0;
+	li {
+		font-size: 0;
+	}
+}
+
+.gallery__imageContainer.journal__imageContainer {
+	@include bp(med) {
+		width: 80%;
+		margin: 0 auto;
+	}
+}
+
+// .gallery__item located in _gallery.scss partial
+
+
+.journal__overlay {
+	position: absolute;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(255,255,255, 0.6);
+	color: black;
+	font-family: $fontSecondary;
+	size: 1.2rem;
+	padding: 10px 20px;
+	display: none;
+	a {
+		color: black;
+		font-size: 1.2rem;
+		text-decoration: none;
+	}
+}
+
+.journal__overlay {
+	@include bp(med) {
+		display: block;
+	}
+}
+
+.journal__overlay p {
+	text-align: right;
+	line-height: 0.8rem;
+}
+
+.journal__overlay--date {
+	background-color: $brandPrimary;
+	color: white;
+	font-size: 0.8rem;
+	font-family: $fontPrimary;
+	padding: 3px;
+}
+
+li:hover .journal__overlay {
+	display: block;
+}
+
+.journal__overlay--center {
+	background-color: rgba(255,255,255, 1);
+	justify-content: flex-start;
+	align-items: flex-start;
+	display: block;
+	p {
+		text-align: left;
+	}
+}
+
+.journal__overlay--center p:last-of-type {
+	font-family: $fontPrimary;
+	font-size: 0.7rem;
+	line-height: 1.2rem;
+	padding-top: 10px;
+}
+
+.gallery__item.journal__hideMedium {
+	@include bp(med) {
+		display: none;
+	}
+}
+
+.gallery__item.journal__hideSmall {
+	@include bp(sml) {
+		display: none;
+	}
+}
+
+.journal__button--container {
+	text-align: center;
+}
+
+.journal__button {
+	background-color: black;
+	border: 2px solid $brandPrimary;
+	border-radius: 0;
+	padding: 8px 10px;
+	margin: 50px 0;
+	a:hover {
+		background-color: $brandPrimary;
+		color: black;
+	}
+}
+
+.journal__button a {
+	text-decoration: none;
+	font-family: $fontPrimary;
+	color: $brandPrimary;
+	font-size: 0.7rem;
+	padding: 9px 20px;
+	margin: -10px;
+}
+
+// end .journal

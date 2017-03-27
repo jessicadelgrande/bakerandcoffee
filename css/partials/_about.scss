@@ -1,0 +1,30 @@
+// start .about
+
+.about {
+	@include sectionBackground("../assets/aboutbg.png");
+	@include sectionPadding;
+}
+
+.about__textWrapper {
+	padding-right: 35%;
+	@include bp(med) {
+		padding-right: 0;
+		padding: 50px;
+		margin: 0 auto;
+	}
+}
+
+.sectionText.about__text {
+	margin-bottom: 150px;
+	margin-top: 80px;
+}
+
+.about__image--signature {
+	width: 30%;
+	margin-bottom: 25px;
+	@include bp(med) {
+		width: 20%;
+	}
+}
+
+// end .about 

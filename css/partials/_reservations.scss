@@ -1,0 +1,199 @@
+// start .reservations
+
+.reservations {
+	@include sectionBackground("../assets/reservationbg.png");
+	@include sectionPadding;
+}
+
+.reservations__wrapper {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	@include bp(mid) {
+		flex-direction: column;
+	}
+}
+
+.reservations__details {
+	width: 35%;
+	@include bp(mid) {
+		width: 100%;
+	}
+}
+
+.reservations__details--text p {
+	margin-top: 0;
+}
+
+.reservations__phoneReservations {
+	@include doubleBorder(black, black);
+	display: flex;
+	margin-top: 50px;
+	@include bp(mid) {
+		width: 300px;
+		margin: 0 auto;
+		margin-top: 50px;
+	}
+}
+
+.fa.fa-phone.reservations__phoneIcon {
+	width: 30%;
+	font-size: 3rem;
+	text-align: center;
+	color: $brandPrimary;
+	padding: 10px 10px 10px 10px;
+}
+
+.reservations__phoneReservations--text {
+	display: block;
+	text-align: left;
+}
+
+.phone__reservations--bold {
+	font-weight: bold;
+	font-size: 1rem;
+}
+
+.reservations__formContainer {
+	width: calc(65% - 30px);
+	@include doubleBorder(black, black);
+	@include marginLeft;
+	@include bp(mid) {
+		margin: 0 auto;
+		margin-top: 50px;
+		width: 100%;
+	}
+}
+
+.reservations__form {
+	text-align: left;
+}
+
+.form__inputContainer {
+	border: 1px solid black;
+	padding: 4px 0 4px 14px;
+	background: white;
+	width: 50%;
+	@include bp(med) {
+		width: 100%;
+	}
+}
+
+.form__input--label.contact__input--label {
+	margin: 0;
+	width: 100%;
+}
+
+.form__input--label.reservations__message--label {
+	border-top: 2px solid black;
+	border-bottom: none;
+	width: 100%;
+	background-color: white;
+	padding-top: 12px;
+	padding-left: 14px;
+}
+
+.form__fullWidth {
+	display: flex;
+	width: 100%;
+	position: relative;
+	input {
+		border: none;
+	}
+}
+
+.form__fullWidth {
+	@include bp(med) {
+		flex-direction: column;
+	}
+}
+
+.input__half {
+	padding: 15px;
+	width: 50%;
+	@include bp(med) {
+		width: 100%;
+	}
+}
+
+.input__half.input__half--date {
+	border: 1px solid black;
+}
+
+.calendarIcon {
+	position: absolute;
+	top: 21%;
+	left: 43%;
+	font-size: 1.5rem;
+	@include bp(med) {
+		top: 13%;
+		left: 90%;
+	}
+}
+
+.clockIcon {
+	position: absolute;
+	top: 21%;
+	right: 2%;
+	font-size: 1.7rem;
+	@include bp(med) {
+		top:60%;
+		left: 90%;
+	}
+}
+
+.input__half.input__half--time {
+	border: 1px solid black;
+}
+
+.form__fullWidth.form__fullWidth--reservation {
+	border-top: 1px solid black;
+}
+
+.form__fullWidth.form.form__fullWidth--reservation.form__emailPhoneRow {
+	border-top: 1px solid black;
+}
+
+.form__fullWidth--message {
+	width: 100%;
+}
+
+.form__fullWidth--message.form__fullWidth--messageText {
+	border-style: none;
+}
+
+.form__fullWidth--button.form__fullWidth {
+	background-color: white;
+	background-image: url("../assets/seal.png");
+	background-repeat: no-repeat;
+	background-size: 30%;
+	border: 1px solid black;
+	border-top: 2px solid black;
+	border-radius: 0;
+	font-size: 1rem;
+	letter-spacing: 0.1rem;
+	text-align: center;
+	font-weight: bold;
+	padding: 30px 0;
+	a {
+		text-decoration: none;
+		color: black;
+		margin: 0 auto;
+		@include bp(med) {
+			margin: 0 auto;
+		}
+	}
+}
+
+.form__fullWidth--button.form__fullWidth {
+	@include bp(med) {
+		background-size: 41%;
+		text-align: center;
+	}
+}
+
+.form__fullWidth--button a:hover {
+	color: $brandPrimary;
+}
+
+// end .reservations 

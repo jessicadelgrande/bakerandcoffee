@@ -1,0 +1,53 @@
+// start .drawings
+
+.drawings {
+	display: flex;
+	align-items: flex-end;
+	@include bp(med) {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		@include bp(sml) {
+			flex-direction: column;
+		}
+	}
+}
+
+.drawing__container {
+	width: 33.33%;
+	padding: 35px;
+	margin-top: 65px;
+	@include bp(med) {
+		width: 50%;
+		@include bp(sml) {
+			width: 100%;
+		}
+	}
+}
+
+.drawing__container--image .cupcake {
+	width: 60%;
+	@include centerItem;
+}
+
+.drawing__container--image .croissant {
+	width: 70%;
+	@include centerItem;
+}
+
+.drawing__container--image .coffee {
+	width: 90%;
+	@include centerItem;
+}
+
+.drawing__container--description {
+	text-align: center;
+	vertical-align: bottom;
+}
+
+.drawing__container--description h3 {
+	font-family: $fontSecondary;
+	font-size: 1.5rem;
+}
+
+// end .drawings
